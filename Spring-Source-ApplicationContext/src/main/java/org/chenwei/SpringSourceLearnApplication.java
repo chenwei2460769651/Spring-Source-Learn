@@ -22,17 +22,17 @@ public class SpringSourceLearnApplication {
         singletonObjects.setAccessible(true);
         ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
         Map<String, Object> map = (Map<String, Object>) singletonObjects.get(beanFactory);
-        //获取bean
+        //获取bean Get the Spring container bean
         map.entrySet().stream().filter(e -> e.getKey().startsWith("StudentBean")).forEach(e -> {
             System.out.println(e.getKey() + "=" + e.getValue());
         });
 
-        //获取目录下spring配置文件
+        //获取目录下spring配置文件 Obtain the spring configuration file in the directory
         Resource[] resources = context.getResources("classpath*:META-INF/spring.factories");
         for (Resource resource : resources) {
             System.out.println(resource);
         }
-        //获取配置信息
+        //获取配置信息 Get environment variable configuration information or properties configuration information
         ConfigurableEnvironment environment = context.getEnvironment();
         System.out.println(environment.getProperty("java_home"));
         System.out.println(environment.getProperty("spring.application.name"));

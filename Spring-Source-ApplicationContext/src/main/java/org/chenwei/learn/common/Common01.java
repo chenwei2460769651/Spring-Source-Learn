@@ -17,8 +17,9 @@ public class Common01 {
 
     //    @EventListener
     public void register() {
-        log.info("用户注册");
+        log.info("user register~");
 
+        //注册事件发生器
         context.publishEvent(new UserRegisterEventPublish(this));
 
     }

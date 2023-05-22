@@ -16,7 +16,7 @@ public class Common02 {
     public void Common02Listener(UserRegisterEventPublish event){
         log.info("{}",event);
 
-        log.info("发送短信");
+        log.info("send Message");
     }
 
 
