@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class EasyExpory {
+public class EasyExport {
 
     public static void main(String[] args) throws Exception {
         List<UserEntity> dataList = new ArrayList<>();
